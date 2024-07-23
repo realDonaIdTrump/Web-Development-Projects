@@ -1,0 +1,25 @@
+div{
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 100px;
+}
+
+h1{
+    font-family: "Libre Baskerville", serif;
+    text-transform: capitalize;
+    margin-left: 25%;
+}
+
+html{
+    background-color: black;
+}
+
+#lion{
+    border: 5px solid white;
+    width: 100%;
+}
+
+P{
+    margin-left: 25%;
+}
