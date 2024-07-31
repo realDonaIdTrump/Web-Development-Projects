@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondrian Project</title>
+    <style>
+      /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+      body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 320px 198px 153px 50px;
+        grid-template-rows: 414px 130px 155px 22px;
+        width: 748px;
+        height: 748px;
+        gap: 9px;
+        background-color: black;
+      }
+
+      .block1 {
+        background-color: #e72f24;
+      }
+
+      .block2 {
+        background-color: #f0f1ec;
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
+
+      .block3 {
+        background-color: #f0f1ec;
+        grid-row: 2 / 4;
+      }
+
+      .block4 {
+        background-color: #f0f1ec;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      .block5 {
+        background-color: #004592;
+        border-bottom: 10px solid #000; /* or any desired color */
+      }
+
+      .block6 {
+        background-color: #f0f1ec;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+
+      .block7 {
+        background-color: #f0f1ec;
+      }
+
+      .block8 {
+        background-color: #f9d01e;
+      }
+
+      .block9 {
+        background-color: #232629;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Write your HTML here -->
+    <div class="container">
+      <div class="block1"></div>
+      <div class="block2"></div>
+      <div class="block3"></div>
+      <div class="block4"></div>
+      <div class="block5"></div>
+      <div class="block6"></div>
+      <div class="block7"></div>
+      <div class="block8"></div>
+      <div class="block9"></div>
+    </div>
+  </body>
+</html>
