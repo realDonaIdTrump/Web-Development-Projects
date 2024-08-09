@@ -1,10 +1,12 @@
-const buttonColours = new Array("red", "blue", "green", "yellow");
+var gamePattern = [];
 
-var randomChosenColour = buttonColours[nextSequence()];
+var buttonColours = ["red", "blue", "green", "yellow"];
 
-console.log(randomChosenColour);
+console.log(gamePattern);
 
 function nextSequence(){
     var randomNumber = Math.floor(Math.random()*4);
-    return randomNumber;
+    var randomChosenColour = buttonColours[randomNumber];
+    gamePattern.push(randomChosenColour);
+    $("#"+randomChosenColour).fadeOut(100).fadeIn(100);
 }
