@@ -19,8 +19,7 @@ inquirer
   .then((answers) => {
     // Use user feedback for... whatever!!
     const url = answers.url;
-    console.log(url);
-    var qr_svg = qr.image("url image", { type: "png" });
+    var qr_svg = qr.image(url);
     qr_svg.pipe(fs.createWriteStream("url_image.png"));
 
     fs.writeFile("URL.txt", url, (err) => {
