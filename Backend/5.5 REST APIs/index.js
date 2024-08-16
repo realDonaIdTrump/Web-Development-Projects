@@ -29,7 +29,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.status(404).send(error.message);
+    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
   }
 });
 
@@ -79,7 +79,7 @@ app.post("/patch-secret", async (req, res) => {
     res.render("index.ejs", { content: JSON.stringify(result.data) });
     res.sendStatus(200);
   } catch (error) {
-    res.status(404).send(error.response.data);
+    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
   }
 });
 
@@ -91,7 +91,7 @@ app.post("/delete-secret", async (req, res) => {
     res.render("index.ejs", { content: JSON.stringify(result.data) });
     res.sendStatus(200);
   } catch (error) {
-    res.status(404).send(error.response.data);
+    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
   }
 });
 
