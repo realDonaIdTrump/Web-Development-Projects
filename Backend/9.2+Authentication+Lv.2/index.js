@@ -73,7 +73,7 @@ app.post("/login", async (req, res) => {
     if (result.rows.length > 0) {
       const user = result.rows[0];
       const storedPassword = user.password;
-
+      b
       if (password === storedPassword) {
         res.render("secrets.ejs");
       } else {
